@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>functions</title>
+</head>
+
+<body>
+
+        <script>
+                //    JavaScript Functions – Assignment -->
+                //   20 Practice Questions -->
+                //    A. Simple Functions -->
+                //     1.	Create a function greet() that prints "Hello, Welcome to JavaScript!". -->
+
+                //    answer:- 
+
+                //    function greeet(){
+                //     console.log("hello");
+                //    }
+                //    greeet()
+
+                // 2.	Create a function welcome() that prints your name, course, and institute name.
+
+                // answer
+
+                // function welcome(name,course,institute){
+                //     console.log("1 name : "+name," 2 course : "+course,"3 institute : "+institute);
+
+                // }
+                // welcome("(dishant)","(web devlopement)","(excellence tecnology)")
+
+                //  3.	Create a function showNumbers() that prints numbers from 1 to 10 using a loop.
+
+                // answer
+
+                // function showNumbers(){
+                //   for (let a=1 ; a<=10; a++){
+                //     console.log(a);
+
+                //   }  
+                // }
+                // showNumbers()
+                // 4.	Create a function evenNumbers() that prints all even numbers from 1 to 20.
+
+                // answer:-
+
+                // function evenNumbers(){
+                //     for (let a=1 ; a<=20; a++){
+                //     if (a%2===0){
+                //         console.log(a);
+
+                //     }
+                //     }
+                // }
+                // evenNumbers()
+                //    5.	Create a function calculate() that prints the result of 10 + 20.
+
+                // answer:-
+                // function calculate(a,b){
+                //     sum=a+b;
+                //     console.log(sum);
+
+                // }
+                // calculate(10,20)
+
+                //  B. Functions with Parameters&Arguments
+
+                // 6.	Create a function greetUser(name) that accepts a name as a parameter and prints a greeting.
+                // answer    
+                //  greetUser=(name)=>{
+                //     console.log(name);
+
+                //    }
+                //    greetUser("dishant")
+
+                // 7.	Create a function add(a, b) that accepts two numbers and prints their sum.
+                //  answer
+                // function add(a,b){
+                //     sum=a+b
+                //     console.log(sum)
+
+                // }
+                // add(20,30)
+                // result=50
+
+                // 8.	Create a function subtract(a, b) that accepts two numbers and returns their difference.
+
+                // answer
+                // function subtract(a,b){
+                //     sum=a-b
+                //     console.log(sum);
+
+                // }
+                // subtract(30,5)
+                // result=25
+
+                // 9.	Create a function multiply(a, b) that accepts two numbers and prints their multiplication.
+
+                //    answer
+
+                // function multiply (a,b){
+                //     sum=a*b
+                //     console.log(sum);
+
+                // }
+                // multiply(30,3)
+                // result=90
+
+                // 10.	Create a function divide(a, b) that accepts two numbers and returns their division.
+
+                // answer
+
+                // function divide (a,b){
+                //     sum=a/b
+                //     console.log(sum);
+
+                // }
+                // divide(500,20)
+                // result = 25
+
+                // 11.	Create a function square(num) that accepts a number and returns its square.
+
+                //   answer:-
+                // function square(num){
+                //     sum=num*num
+                //     console.log(sum);
+
+                // }
+                // square(5)
+                // result =25
+
+                // 12.	Create a function checkEvenOdd(num) that accepts a number and prints whether it is Even or Odd.
+                // answer:-
+
+                //   function checkEvenOdd(num){
+                //     if(num%2===0){
+                //         console.log("even");
+
+                //     } else{
+                //         console.log("odd");
+
+                //     }
+                //   }
+                //   checkEvenOdd(31)
+                //   result=Odd
+
+                // 13.	Create a function findLargest(a, b) that accepts two numbers and prints the larger number.
+                // answer:-
+                // function findLargest(a, b) {
+                //         if (a > b) {
+                //                 console.log(a);
+                //         } else {
+                //                 console.log(b);
+                //         }
+                // }
+                // findLargest(20,30)
+                // result=30
+
+                // 14.	Create a function student(name, age, course) that accepts three arguments and prints the student’s details.
+
+                // answer:-
+
+                // function student(name,age,course){
+                //         console.log("name"+name);
+                //         console.log("age"+age);
+                //         console.log("course"+course)
+
+
+
+                // }
+                // student("dishant",20,"web devlopment")
+
+                // 15.	Create a function calculateMarks(m1, m2, m3) that accepts marks of three subjects and returns the total marks.
+
+                // answer:-
+                // function calculateMarks(m1,m2,m3){
+                //         total=m1+m2+m3
+                //         console.log(total);
+
+                // }
+                // calculateMarks(70,80,60)
+                // result=210
+                //16.	Create an arrow function greet that prints "Hello JavaScript".
+                //  answer:-
+
+                // const greet = () => console.log("Hello JavaScript");
+
+                // greet();
+
+                // 17.	Create an arrow function add(a, b) that returns the sum of two numbers.
+                // answer:-
+                // const add = (a, b) => a + b;
+
+                // console.log(add(5, 3)); 
+                // result =8
+
+                // 18.	Create an arrow function square(num) that returns the square of a number.
+
+                // answer:-
+
+
+                // 19.	Create an arrow function checkAge(age) that checks whether a person is 18 or older and prints "Eligible" or "Not Eligible".
+                //   answer:-
+
+                // const checkAge = (age) => {
+                //         if (age >= 18) {
+                //                 console.log("Eligible");
+                //         } else {
+                //                 console.log("Not Eligible");
+                //         }
+                // };
+                // checkAge(20)
+                // result = Eligible
+
+                // 20.	Create an arrow function calculateBill(price, quantity) that calculates and returns the total bill.
+                //  answer:-
+
+                
+                // calculateBill = (price, quantity) => price * quantity;
+
+                
+                //  itemPrice = 25;     
+                //  itemQuantity = 3;  
+
+                //  totalBill = calculateBill(itemPrice, itemQuantity);
+
+                // console.log(totalBill);
+                //  result=75
+
+        </script>
+</body>
+
+</html>
