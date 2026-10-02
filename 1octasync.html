@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async await timing function</title>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+        // * question no 1
+
+    //    setTimeout (function welcomeuser(){
+    //        console.log("text Welcome to JavaScript Async/Await!");
+    //     },2000);
+
+        // answer:- sentence is print in console after  2 seconds 
+          
+function clock(){
+        time = new Date();
+        h= time.getHours();
+        m = time.getMinutes();
+        s = time.getSecounds();
+
+        document.getElementById("time").innerText = h+":"+m+":"+s ;
+
+        setTimeout(clock,1000);
+       }
+       clock();
+           
+        
+    </script>
+</body>
+</html>
