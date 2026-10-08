@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>local storage</title>
+  </head>
+  <body>
+    <h1>Register</h1>
+    <form id="registration form">
+      <label>full name <input id="name" type="text" /></label>
+      <label>email <input id="email" type="email" /></label>
+      <label>password <input id="password" type="password" /></label>
+      <label>confirm password <input id="confirm password" type="password" /></label>
+      <button type="submit">register</button>
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+      function registeruser() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirmPassword").value;
+        const message = document.getElementById("message");
+      
+
+       if (!name || !email || !password || !confirmPassword) {
+                message.textContent = "Please enter in all.";
+                return false;
+            }
+
+            if (password !== confirmPassword) {
+                message.textContent = "Passwords do not match.";
+                return false;
+            }
+             localStorage.setItem("registeredUser", JSON.stringify({
+                name: name,
+                email: email,
+                password: password
+            }));
+           
+        }
+    </script>
+  </body>
+</html>

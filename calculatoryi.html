@@ -6,26 +6,100 @@
     <title>calculator desighn</title>
 </head>
 <style>
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    body{
-        background-color: antiquewhite;
-        
-        display: flex;
-        justify-content: center;
+   *{
+    box-sizing: border-box;
+  }
 
-    }
-    .conatainer{
-        width: 300px;
-        height: 450px;
-        background-color: rgb(76, 76, 177);
-    }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: #bfe7ff;
+    font-family:  sans-serif;
+  }
+
+  .calculator {
+    width: 320px;
+    background: rgba(71, 119, 231, 0.95);
+    padding: 22px 18px 18px;
+    border-radius: 24px;
+   
+   
+  }
+
+  .display {
+    width: 100%;
+    height: 70px;
+    margin-bottom: 18px;
+    padding: 12px 14px;
+    border: 1px solid black;
+    border-radius: 15px;
+    background: rgba(245, 245, 245, 0.9);
+    font-size: 25px;
+    color: #1d1d1d;
+   
+  }
+
+  .keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .btns {
+    border: none;
+    height: 54px;
+    font-size: 20px;
+    font-weight: 700;
+    background: #472fa6;
+    color: #f0efef;
+    border: 1px solid black;
+    border-radius: 15px;
+
+  }
+  .btns.ops{
+    background-color: rgb(214, 87, 87);
+    color: white;
+  }
+  .btns.op{
+    background-color: rgb(73, 186, 107);
+    color: white;
+  }
+  .btns.equal{
+    background-color: rgb(222, 122, 29);
+    color: white; 
+   
+    
+  }
+
 
 </style>
 <body>
-    <div class="conatainer"></div>
+    <form class="calculator" action="">
+    <input class="display" type="text" name="display" id="display" >
+
+    <div class="keypad">
+        <input class="btns" type="button" value="1" onclick="display.value+='1'">
+      <input class="btns" type="button" value="2" onclick="display.value+='2'">
+      <input class="btns" type="button" value="3" onclick="display.value+='3'">
+      <input class="btns" type="button" value="4" onclick="display.value+='4'">
+      <input class="btns" type="button" value="5" onclick="display.value+='5'">
+      <input class="btns" type="button" value="6" onclick="display.value+='6'">
+       <input class="btns" type="button" value="7" onclick="display.value+='7'">
+      <input class="btns" type="button" value="8" onclick="display.value+='8'">
+      <input class="btns" type="button" value="9" onclick="display.value+='9'">
+       <input class="btns" type="button" value="0"  onclick="display.value+='0'">
+    
+      <input class="btns ops " type="button" value="AC" onclick="display.value=''">
+      <input class="btns  ops" type="button" value="DEL" onclick="display.value=display.value.slice(0,-1)">
+      <input class="btns op" type="button" value="/" onclick="display.value+='/'">
+      <input class="btns op  " type="button" value="*" onclick="display.value+='*'">
+      <input class="btns op " type="button" value="-" onclick="display.value+='-'">
+      <input class="btns op " type="button" value="+" onclick="display.value+='+'">
+      <input   class="btns equal" type="button" value="=" onclick="display.value=eval(display.value)">
+</div>
+     
+  </form>
 </body>
 </html>

@@ -1,39 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>data fetch</title>
+  </head>
+  <style>
+    .dfg{
+      background-color: blue; 
+     min-width: 300px; 
+      text-align: center;
+      margin-bottom: 20px;
+      border-radius: 20px;
+      padding: 20px;
+    }
+  </style>
 
-</head>
-<body>
-    
-
-    <div id="box"></div>
-
+  <body>
+    <div  style=" display: grid ; margin-left: 40px;   grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); " id="box"></div>
 
     <script>
+      // first 1
 
-        // first 1
+      // fetch("https://jsonplaceholder.typicode.com/users")
+      // .then(res=>res.json())
+      // .then(data=>console.log(data))
+      // .catch(err=>console.log(err)
+      // )
 
-        // fetch("https://jsonplaceholder.typicode.com/users")
-        // .then(res=>res.json())
-        // .then(data=>console.log(data))
-        // .catch(err=>console.log(err)
-        // )
+      // secound 2
 
+      //     fetch("https://jsonplaceholder.typicode.com/users")
+      //     .then(res=>res.json())
+      //     .then(data=>document.getElementById("box").innerHTML=data.map((p)=>
+      //     `<h1> ${p.name}</h1>
+      //     <h1> ${p.phone}</h1>`
 
+      // ))
 
-        // secound 2
+      // third 3
 
-        fetch("https://jsonplaceholder.typicode.com/users")
-        .then(res=>res.json())
-        .then(data=>document.getElementById("box").innerHTML=data.map((p)=>
-        `<h1> ${p.name}</h1>
-        <h1> ${p.phone}</h1>`
+      fetch("https://jsonplaceholder.typicode.com/posts")
+        .then((res) => res.json())
+        .then(
+          (data) =>
+            (document.getElementById("box").innerHTML = data.map(
+              (p) =>
+                `<div class="dfg">
+    <h1 style="color:red">${p.title}</h1>
+    <h1>${p.body}</h1>
     
-    ))
-       
+    </div>
+`,
+            )),
+        )
+        .catch(
+          (err) => (document.getElementById("box").innerHTML = "api loading"),
+        );
     </script>
-</body>
+  </body>
 </html>
